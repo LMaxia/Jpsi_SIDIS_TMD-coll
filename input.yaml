@@ -1,0 +1,108 @@
+#####---- Global variables ----#########################
+e_c:           0.666666666667   # 2/3
+alpha_QED:     0.007299270073   # 1/137
+Mjp: &Jpsimass 3.1              # GeV
+Mz:            91.2             # GeV
+########################################################
+
+
+#####---- Plot options ----#############################
+# Starting point for qT array
+qT_sp: 0.0001                   # GeV
+# Ending point for qT array
+qT_ep: 10                       # GeV
+# Number of points
+inum: 100
+########################################################
+
+
+#####---- Energy scales ----############################
+M: *Jpsimass
+Q: 12                           # GeV
+xB: 0.115
+########################################################
+
+
+#####---- Photon polarisation ----######################
+# [T] transverse
+# [L] longitudinal
+pol: 'T'
+########################################################
+
+
+#####---- Errors ----###################################
+# [0] deactive - [1] active
+#### ------------------- ####
+# Scale
+scale_err: 1
+#### ------------------- ####
+# LDME err
+ldme_err: 1
+#### ------------------- ####
+# Non perturbative Sudakov (only TMD)
+np_err: 1
+#### ------------------- ####
+# number of cominations (only TMD)
+# [7] - [9] - [14] - [21] - [27]
+npoints: 7
+########################################################
+
+
+#####---- TMD evolution options ----####################
+# Sudakov accuracy:
+# [1-loop] - [NLL]
+acc: 'NLL'
+########################################################
+
+
+#####---- TMDShF BCO contribution ----##################
+# Note that: the following options are based on the⮐
+# assumption that ζf * ζShF = M**2 + Q**2
+# [0] deactive 
+# [1] costant (1)
+# [2] 1 + log(M2/(M2 + Q2)))
+iBCO: 2
+#### ------------------- ####
+# Values of nonperturbative contributions
+# [0] - [0.1]
+gpsi: 0
+########################################################
+
+
+#####---- LDME set ----#################################
+# [0] Color-Singlet only
+# [1] CM12 - 10.1103/PhysRevLett.108.242004
+# [2] BK11fd - 0.1103/PhysRevD.84.051501 (with feed-down)
+# [3] BK11 - 0.1103/PhysRevD.84.051501 (prompt)
+# [4] SYY13 - 10.1103/PhysRevD.88.05400Pa8
+# [5] G13 - 10.1103/PhysRevLett.110.042002
+# [6] SV13 - 10.1103/PhysRevC.87.044905
+# [7] KZ02 - 10.1016/S0550-3213(01)00564-8 (k=0.5)
+# [8] BC22 - 10.1103/PhysRevD.105.L111503
+ildme: 1
+########################################################
+
+
+#####---- PDF set ----##################################
+# [1] NNPDF40 (LO & as = 0.118)
+# [2] MSHT20 (LO & as = 0.130) 
+# [3] MSHT20 (NLO & as = 0.118)
+# [4] NNPDF40 (NLO & as = 0.118)
+# [5] MSTW2008 (LO & 68% of c.l.)
+ipdf: 1
+########################################################
+
+
+#####---- Parton and wve decomposition ----#############
+# CO wave: 
+# [0] 1s0 
+# [1] 3s1 
+# [2] 3pJ 
+# [10] full
+wave: 10
+#### ------------------- ####
+# parton contribution: 
+# [0] deactive - [1] active
+ig: 1
+iq: 1
+########################################################
